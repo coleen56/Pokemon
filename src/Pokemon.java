@@ -4,6 +4,14 @@ public class Pokemon {
     private double atk;
     private String type;
 
+    /**
+     * constructeur Pokemon
+     * @param nom
+     * @param hp
+     * @param atk
+     * @param type
+     */
+
     public Pokemon(String nom, double hp, double atk, String type) {
         this.nom = nom;
         this.hp = hp;

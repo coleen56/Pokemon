@@ -1,8 +1,13 @@
 public class TypeEau extends Pokemon {
+
     public TypeEau(String nom, int hp, double atk, String type) {
         super(nom, hp, atk, type);
     }
 
+    /**
+     * surcharge de la methode attaquer
+     * @param p
+     */
     @Override
     public void attaquer(Pokemon p) {
         if (p instanceof TypeFeu) {
