@@ -4,10 +4,6 @@ public class TypeEau extends Pokemon {
         super(nom, hp, atk, type);
     }
 
-    /**
-     * surcharge de la methode attaquer
-     * @param p
-     */
     @Override
     public void attaquer(Pokemon p) {
         if (p instanceof TypeFeu) {
@@ -16,5 +12,10 @@ public class TypeEau extends Pokemon {
             super.setAtk(0.5*super.getAtk());
         }
         super.attaquer(p);
+        if (p instanceof TypeFeu) {
+            super.setAtk(0.5*super.getAtk());
+        } else if (p instanceof TypePlante || p instanceof TypeEau) {
+            super.setAtk(2*super.getAtk());
+        }
     }
 }

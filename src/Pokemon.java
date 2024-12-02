@@ -4,13 +4,6 @@ public class Pokemon {
     private double atk;
     private String type;
 
-    /**
-     * constructeur Pokemon
-     * @param nom
-     * @param hp
-     * @param atk
-     * @param type
-     */
 
     public Pokemon(String nom, double hp, double atk, String type) {
         this.nom = nom;
@@ -60,6 +53,9 @@ public class Pokemon {
         boolean dead;
         double hp = getHp();
         dead = hp <= 0;
+        if (dead) {
+            setHp(0);
+        }
         return dead;
     }
 
